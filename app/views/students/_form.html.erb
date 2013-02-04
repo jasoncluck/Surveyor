@@ -1,0 +1,9 @@
+<%= simple_form_for(@student, :html => { :class => 'form-horizontal'}) do |f| %>
+  <%= f.input :question1, :default => 1, :as => :radio_buttons, :collection => ["Weather", "House Prices", "Taxes"], :label => "Which of the following is the most important to you?" %>
+  <%= f.input :question2, :default => 1, :as => :radio_buttons, :collection => ["Weather", "House Prices", "Taxes"], :label => "Which of the following is the least important to you?" %>
+  <%= f.input :question3, :default => 1, :as => :radio_buttons, :collection => [50, 55, 60, 65, 70, 75, 80, 90], :label => "What is your favorite ideal temperature?" %>
+  <%= f.input :question4, :default => 1, :as => :radio_buttons, :collection => ["Lots of highs and lows, with hot summers and cold winters", "Stable temperatures year round
+"], :label => "Over the course of the year, do you prefer:" %>
+
+  <%= f.button :submit, "Submit answers" %>
+<% end %>

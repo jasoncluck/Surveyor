@@ -1,4 +1,8 @@
 Surveyor::Application.routes.draw do
+  resources :students
+  match 'download' => 'students#download'
+  root :to => 'students#new'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
